@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vikram Mehta - Portfolio</title>
+  <title>Arjun Sharma - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -225,6 +225,15 @@
       color: var(--accent);
     }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
     section {
       min-height: 100vh;
       width: 100%;
@@ -408,6 +417,8 @@
       
       header h1 {
         margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
       }
       
       nav {
@@ -425,6 +436,64 @@
       
       .content-wrapper {
         padding: 30px 20px;
+      }
+      
+      .menu-toggle {
+        display: block;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav);
+        flex-direction: column;
+        padding: 15px 0;
+        box-shadow: var(--shadow);
+        border-bottom: 1px solid var(--border);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 90px 3% 50px;
+      }
+      
+      .content-wrapper {
+        padding: 25px 15px;
+      }
+      
+      .preloader-text {
+        font-size: 20px;
+      }
+      
+      h2 {
+        font-size: 24px;
+      }
+      
+      p {
+        font-size: 15px;
+      }
+      
+      .skills span, .certifications span, .languages span {
+        font-size: 13px;
+        padding: 5px 12px;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+      }
+      
+      .contact-info a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
       }
     }
   </style>
@@ -464,8 +533,11 @@
   </div>
 
   <header>
-    <h1 id="name">Vikram Mehta</h1>
+    <h1 id="name">Arjun Sharma</h1>
     <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <div class="nav-links">
         <a href="#about" data-target="about">About</a>
         <a href="#skills" data-target="skills">Skills</a>
@@ -484,9 +556,9 @@
     <section id="about">
       <div class="content-wrapper">
         <h2>About Me</h2>
-        <p id="about-text">I am a passionate data scientist with expertise in machine learning and artificial intelligence. With a strong background in mathematics and statistics, I specialize in developing data-driven solutions that help businesses make informed decisions and optimize their operations.</p>
-        <h3>Role: Senior Data Scientist</h3>
-        <p>Email: vikram.mehta@example.com | Phone: 9876543210</p>
+        <p id="about-text">I am a passionate software developer with expertise in full-stack development. With over 5 years of experience in the tech industry, I specialize in building scalable web applications and implementing efficient solutions to complex problems. I am dedicated to writing clean, maintainable code and constantly learning new technologies.</p>
+        <h3>Role: Senior Software Engineer</h3>
+        <p>Email: arjun.sharma@example.com | Phone: 9876543210</p>
       </div>
     </section>
 
@@ -494,29 +566,29 @@
       <div class="content-wrapper">
         <h2>Skills</h2>
         <div class="skills-container skills" id="skills-list">
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
           <span>Python</span>
-          <span>R</span>
-          <span>SQL</span>
-          <span>Machine Learning</span>
-          <span>Deep Learning</span>
-          <span>TensorFlow</span>
-          <span>PyTorch</span>
-          <span>Data Visualization</span>
-          <span>Statistical Analysis</span>
+          <span>Java</span>
+          <span>MongoDB</span>
+          <span>AWS</span>
+          <span>Docker</span>
+          <span>GraphQL</span>
         </div>
 
         <h3>Certifications</h3>
         <div class="certifications-container certifications" id="certifications-list">
-          <span>Google Professional Data Engineer</span>
-          <span>AWS Certified Machine Learning Specialist</span>
-          <span>IBM Data Science Professional</span>
+          <span>AWS Certified Solutions Architect</span>
+          <span>MongoDB Certified Developer</span>
+          <span>Google Cloud Professional Developer</span>
         </div>
 
         <h3>Languages</h3>
         <div class="languages-container languages" id="languages-list">
           <span>English</span>
           <span>Hindi</span>
-          <span>Marathi</span>
+          <span>Punjabi</span>
         </div>
       </div>
     </section>
@@ -526,18 +598,18 @@
         <h2>Projects</h2>
         <div class="projects-container" id="projects-list">
           <div class="project-item">
-            <h3>Predictive Maintenance System for Manufacturing</h3>
-            <p>Developed a machine learning model that predicts equipment failures with 92% accuracy, reducing downtime by 35% and saving ₹1.5 crore annually for a major manufacturing client.</p>
+            <h3>E-commerce Platform</h3>
+            <p>Developed a full-stack e-commerce platform using React, Node.js, and MongoDB. Implemented features such as user authentication, product search, shopping cart, and payment processing. The platform currently serves over 10,000 monthly active users.</p>
             <a href="#" target="_blank">View Project</a>
           </div>
           <div class="project-item">
-            <h3>Customer Churn Prediction for Telecom</h3>
-            <p>Built a customer churn prediction model using ensemble learning techniques that improved customer retention by 28% for a leading Indian telecom provider.</p>
+            <h3>Task Management App</h3>
+            <p>Created a task management application with real-time updates using React, Socket.io, and Express. Features include task assignments, deadline tracking, and team collaboration tools. Improved team productivity by 30% in internal usage.</p>
             <a href="#" target="_blank">View Project</a>
           </div>
           <div class="project-item">
-            <h3>Natural Language Processing for Customer Support</h3>
-            <p>Created an NLP-based system that automatically categorizes and prioritizes customer support tickets, reducing response time by 45% and improving customer satisfaction scores.</p>
+            <h3>Healthcare Management System</h3>
+            <p>Built a comprehensive healthcare management system for a network of clinics. Implemented appointment scheduling, electronic medical records, and billing integration. The system currently serves over 15 clinics and 50,000 patients.</p>
             <a href="#" target="_blank">View Project</a>
           </div>
         </div>
@@ -549,19 +621,19 @@
         <h2>Experience</h2>
         <div class="experience-container" id="experience-list">
           <div class="experience-item">
-            <h3>Senior Data Scientist at Tata Consultancy Services</h3>
-            <p class="experience-date">August 2022 - Present</p>
-            <p>Leading a team of data scientists to develop and implement machine learning solutions for enterprise clients. Responsible for project planning, model development, and client presentations. Successfully delivered 5 major AI projects with measurable business impact.</p>
+            <h3>Senior Software Engineer at Infosys</h3>
+            <p class="experience-date">January 2023 - Present</p>
+            <p>Leading a team of 8 developers working on enterprise-level cloud solutions. Architecting and implementing scalable microservices using Node.js and AWS. Introduced CI/CD pipelines that reduced deployment time by 70% and improved code quality through automated testing.</p>
           </div>
           <div class="experience-item">
-            <h3>Data Scientist at Infosys</h3>
-            <p class="experience-date">June 2020 - July 2022</p>
-            <p>Developed predictive models and data analytics solutions for clients in finance and retail sectors. Implemented recommendation systems that increased cross-selling by 22%. Created automated reporting dashboards using Power BI and Tableau.</p>
+            <h3>Software Developer at Wipro Technologies</h3>
+            <p class="experience-date">June 2020 - December 2022</p>
+            <p>Developed and maintained web applications for banking clients using React, Node.js, and MongoDB. Implemented secure authentication systems and optimized database queries, improving application performance by 40%. Collaborated with cross-functional teams to deliver projects on schedule.</p>
           </div>
           <div class="experience-item">
-            <h3>Data Analyst at Wipro</h3>
-            <p class="experience-date">January 2018 - May 2020</p>
-            <p>Performed data cleaning, exploratory data analysis, and statistical modeling. Collaborated with business teams to identify key performance indicators and develop data-driven insights. Automated report generation processes, saving 15 hours of manual work weekly.</p>
+            <h3>Junior Developer at TCS</h3>
+            <p class="experience-date">July 2018 - May 2020</p>
+            <p>Worked on front-end development using HTML, CSS, JavaScript, and React. Participated in agile development cycles and contributed to code reviews. Developed reusable component libraries that improved team productivity and ensured consistent UI across projects.</p>
           </div>
         </div>
       </div>
@@ -572,19 +644,19 @@
         <h2>Education</h2>
         <div class="education-container" id="education-list">
           <div class="education-item">
-            <h3>M.Tech in Data Science at IIT Bombay</h3>
+            <h3>M.Tech in Computer Science at IIT Delhi</h3>
             <p class="education-date">2016 - 2018</p>
-            <p>Specialized in machine learning and big data analytics. Graduated with distinction and received the Outstanding Project Award for thesis on predictive modeling.</p>
+            <p>Specialized in Machine Learning and Distributed Systems. Graduated with distinction and received the Outstanding Project Award for thesis on distributed computing optimization.</p>
           </div>
           <div class="education-item">
-            <h3>B.Tech in Computer Science at NIT Nagpur</h3>
+            <h3>B.Tech in Computer Science at NIT Trichy</h3>
             <p class="education-date">2012 - 2016</p>
             <p>Graduated with First Class Honors. Active member of the Coding Club and participated in multiple hackathons, securing first place in the National Coding Championship 2015.</p>
           </div>
           <div class="education-item">
-            <h3>Higher Secondary at Delhi Public School, Mumbai</h3>
+            <h3>Higher Secondary at Delhi Public School, New Delhi</h3>
             <p class="education-date">2010 - 2012</p>
-            <p>Science stream with Computer Science. Scored 94% in CBSE board examinations.</p>
+            <p>Science stream with Computer Science. Scored 95% in CBSE board examinations and ranked in the top 1% nationally.</p>
           </div>
         </div>
       </div>
@@ -594,16 +666,16 @@
       <div class="content-wrapper">
         <h2>Contact</h2>
         <div class="contact-info">
-          <a href="mailto:vikram.mehta@example.com" id="email-link">Email</a>
-          <a href="https://github.com/vikrammehta" target="_blank" id="github-link">GitHub</a>
-          <a href="https://www.linkedin.com/in/vikram-mehta" target="_blank" id="linkedin-link">LinkedIn</a>
+          <a href="mailto:arjun.sharma@example.com" id="email-link">Email</a>
+          <a href="https://github.com/arjunsharma" target="_blank" id="github-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/arjun-sharma" target="_blank" id="linkedin-link">LinkedIn</a>
         </div>
       </div>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Vikram Mehta - All Rights Reserved</p>
+    <p>&copy; 2025 Arjun Sharma - All Rights Reserved</p>
   </footer>
   <script>
     // Preloader fade out with smooth transition
@@ -651,13 +723,13 @@
       setTheme(current);
     }
     
-    // Check for user preference
+    // Check for user preference - modified to default to light mode
     function detectPreferredTheme() {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         return savedTheme;
       }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'light'; // Always default to light mode
     }
     
     // Update active nav link based on scroll position
@@ -683,13 +755,30 @@
       });
     }
     
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+    
     // Initialize the page
     window.onload = () => {
       const theme = detectPreferredTheme();
       setTheme(theme);
       
       // Set current year in footer
-      document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Vikram Mehta - All Rights Reserved`;
+      document.querySelector('footer p').innerHTML = `&copy; ${new Date().getFullYear()} Arjun Sharma - All Rights Reserved`;
       
       // Smooth scroll with JS animation
       document.querySelectorAll('nav a[data-target]').forEach(link => {
